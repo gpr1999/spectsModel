@@ -1,0 +1,26 @@
+
+<form autocomplete="off" class="mx-5">
+    <div class="form-horizontal" [formGroup]="addSpects">
+        <div class="form-group">
+               <label class="control-label ml-3" for="spectsnum">SpectaclesNumber: </label> <br>
+               <input  class="w-50 my-3 ml-3 p-1" type="text" id="spectsnum" formControlName="spectaclesNumber">
+              
+        </div>
+
+        <div class="form-group">
+               <label class="control-label ml-3" for="spectsmod"> SpectaclesModel:</label> <br>
+               <input  class="w-50 my-3 ml-3 p-1" type="text"  id="spectsmod" formControlName="spectaclesModel">
+        </div>
+
+        <div class="form-group">
+                <label  class="control-label ml-3" for="spectsdesc"> SpectaclesDescription:</label> <br>
+                <input  class="w-50 my-3 mx-3 p-1" type="text"  id="spectsdesc" formControlName="spectaclesDescription">
+        </div>
+
+        <div class="form-group">
+               <label  class="control-label ml-3" for="spectscost"> SpectaclesCost:</label> <br>
+               <input  class="w-50 my-3 ml-3 p-1" type="text"  id="spectscost" formControlName="spectaclesCost">
+        </div>
+    </div>
+    <button class="btn bg-info mx-5 font-weight-bold" [disabled]="addSpects.invalid" (click)="add()">Submit</button>
+</form>

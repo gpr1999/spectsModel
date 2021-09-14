@@ -1,0 +1,22 @@
+<div>
+<table class="table bg-warning">
+    <tr>
+        <th>spectaclesId</th>
+        <th>spectaclesName</th>
+        <th>spectaclesModel</th>
+        <th>spectaclesDescription</th>
+        <th>spectaclesCost</th>
+    </tr> 
+    <tbody>
+    <tr *ngFor="let spects of spec1">
+         <td>{{spects.spectaclesId}}</td>
+         <td><input type="text" [(ngModel)]="spects.spectaclesNumber" value="spects.spectaclesNumber"/></td>
+         <td><input type="text" [(ngModel)]="spects.spectaclesModel" value="spects.spectaclesModel"/></td>
+         <td><input type="text" [(ngModel)]="spects.spectaclesDescription" value="spects.spectaclesDescription"/></td>
+         <td> <input type="text" [(ngModel)]="spects.spectaclesCost" value="spects.spectaclesCost"/> </td>
+         <button type="button" (click)="updateSpects(spects)">Update</button>
+         <button type="button" (click)="deleteSpects(spects.spectaclesId)">Delete</button>
+    </tr>
+</tbody>
+</table>
+</div>
